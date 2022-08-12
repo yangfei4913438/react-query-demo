@@ -112,6 +112,7 @@ const Demo = () => {
                   <input
                     className="input input-bordered h-6 w-full"
                     value={pEdit.name}
+                    autoFocus
                     onBlur={async () => {
                       if (pEdit && pEdit?.id === o.id && pEdit.name !== o.name) {
                         await patch.mutate({ id: o.id, send: { name: pEdit.name } });
